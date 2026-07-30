@@ -27,7 +27,7 @@
             $this->synopsis = $_synopsis;
             $this->cast = $_cast;
             $this->year = $_year;
-            $this->genre = $_genres;
+            $this->genres = $_genres;
             
         }
 
