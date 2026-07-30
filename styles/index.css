@@ -1,0 +1,138 @@
+/* ==========================================
+   COZY CINEMA ATMOSPHERE (Low-Light Theme)
+   ========================================== */
+
+:root {
+    --cozy-bg-main: #131217;
+    --cozy-bg-card: #1e1b24;
+    --cozy-bg-card-hover: #262230;
+    --cozy-text-main: #ebe7ef;
+    --cozy-text-muted: #9e98a8;
+    --cozy-accent: #f59e0b;
+    --cozy-border: rgba(255, 255, 255, 0.07);
+    --cozy-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* 1. Main Background */
+body, main, .main {
+    background-color: var(--cozy-bg-main) !important;
+    color: var(--cozy-text-main);
+}
+
+/* 2. Cards */
+/* ==========================================
+   CARD COMPATTA E SLIM
+   ========================================== */
+
+.card {
+    background-color: var(--cozy-bg-card) !important;
+    color: var(--cozy-text-main) !important;
+    border: 1px solid var(--cozy-border) !important;
+    border-radius: 12px;
+    box-shadow: var(--cozy-shadow);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card:hover {
+    background-color: var(--cozy-bg-card-hover) !important;
+    transform: translateY(-2px);
+}
+
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 2/3;  
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    opacity: 0.95;
+}
+
+/* Sinossi ultra-compatta (max 2 righe) */
+.movie-plot {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem !important;
+    line-height: 1.35;
+}
+
+/* Cast su una sola riga (...) */
+.movie-cast {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem !important;
+}
+
+/* 3. Text & Details */
+.text-muted, .card-subtitle, small, p.card-text {
+    color: var(--cozy-text-muted) !important;
+}
+
+.card-title {
+    color: var(--cozy-text-main) !important;
+    font-weight: 600;
+}
+
+.btn-primary, .badge-cozy {
+    background-color: var(--cozy-accent) !important;
+    border-color: var(--cozy-accent) !important;
+    color: #131217 !important;
+    font-weight: 600;
+}
+
+/* ==========================================
+   GENRE BADGES UTILITY CLASSES
+   ========================================== */
+
+/* Stile Base per tutti i badge genere */
+.badge-genre {
+    display: inline-block;
+    padding: 0.35em 0.75em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 50rem; /* Forma a pillola */
+    letter-spacing: 0.4px;
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+/* --- OPZIONE A: Solid Badges (Colori Pieni) --- */
+.badge-action      { background-color: #FF3B30 !important; color: #ffffff !important; }
+.badge-adventure   { background-color: #10B981 !important; color: #061A12 !important; }
+.badge-animation   { background-color: #38BDF8 !important; color: #0F172A !important; }
+.badge-comedy      { background-color: #FACC15 !important; color: #1C1917 !important; }
+.badge-crime       { background-color: #64748B !important; color: #ffffff !important; }
+.badge-documentary { background-color: #D4AF37 !important; color: #141312 !important; }
+.badge-drama       { background-color: #722F37 !important; color: #ffffff !important; }
+.badge-fantasy     { background-color: #A855F7 !important; color: #ffffff !important; }
+.badge-horror      { background-color: #8B0000 !important; color: #ffffff !important; }
+.badge-romance     { background-color: #EC4899 !important; color: #ffffff !important; }
+.badge-scifi       { background-color: #00D2FF !important; color: #0A1128 !important; }
+.badge-thriller    { background-color: #D97706 !important; color: #0F172A !important; }
+
+
+/* --- OPZIONE B: Soft / Night-Mode Badges (Sfondo trasparente + Bordo e Testo colorati) --- */
+.badge-soft {
+    border: 1px solid currentColor;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.badge-soft.badge-action      { color: #FF3B30 !important; }
+.badge-soft.badge-adventure   { color: #10B981 !important; }
+.badge-soft.badge-animation   { color: #38BDF8 !important; }
+.badge-soft.badge-comedy      { color: #FACC15 !important; }
+.badge-soft.badge-crime       { color: #94A3B8 !important; }
+.badge-soft.badge-documentary { color: #D4AF37 !important; }
+.badge-soft.badge-drama       { color: #E11D48 !important; }
+.badge-soft.badge-fantasy     { color: #C084FC !important; }
+.badge-soft.badge-horror      { color: #EF4444 !important; }
+.badge-soft.badge-romance     { color: #F472B6 !important; }
+.badge-soft.badge-scifi       { color: #38BDF8 !important; }
+.badge-soft.badge-thriller    { color: #F59E0B !important; }
