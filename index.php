@@ -1,6 +1,8 @@
 <?php
 
-class Genre {
+
+
+Class Genre {
     public int $id;
     public string $name;
     public string $colorCode;
@@ -12,7 +14,7 @@ class Genre {
     }
 }
 
-class Movie {
+Class Movie {
     public int $id;
     public string $title;
     public string $director;
