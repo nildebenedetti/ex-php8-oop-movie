@@ -15,15 +15,17 @@
         public int $id;
         public string $title;
         public string $director;
+        public string $imgUrl;
         public string $synopsis;
         public string $cast;
         public string $year;
         public array $genres = [];
 
-        public function __construct($_id, $_title, $_director, $_synopsis, $_cast, $_year, $_genres) {
+        public function __construct($_id, $_title, $_director, $_imgUrl, $_synopsis, $_cast, $_year, $_genres) {
             $this->id = $_id;
             $this->title = $_title;
             $this->director = $_director;
+            $this->imgUrl = $_imgUrl;
             $this->synopsis = $_synopsis;
             $this->cast = $_cast;
             $this->year = $_year;
