@@ -1,8 +1,29 @@
 <?php
 
+trait Rentable {
+    // un bool per dire se è rented oppure no
+    public bool $isRent = false;
 
+    // un metodo per verificare disponilbilità
+    public function checkAvailability() :string {
+        return $this->isRent ? "Currently not available" : "Available for rent";
+    }
+    // un metodo per noleggiare
+    public function borrow() :string {
+        $this->isRent = true;
+    return "Yay! You just booked the movie for rental enjoy your watch party and do not forget to hand it back.";
+    }
 
-Class Genre {
+    // e uno per restituire
+    public function return() :string {
+        $this->isRent = false;
+        return "Thanks for handing back the movie! Hope you enjoyed your watch party!";
+
+    }
+
+}
+
+class Genre {
     public int $id;
     public string $name;
     public string $colorCode;
@@ -14,7 +35,10 @@ Class Genre {
     }
 }
 
-Class Movie {
+class Movie {
+
+    use Rentable;
+
     public int $id;
     public string $title;
     public string $director;
@@ -60,5 +84,24 @@ echo $hellraiser->quickInfo();
 echo "------------------------><br>";
 
 echo $matrix->quickInfo();
-
+echo "<br>";
+// controlliamo se rentable
+echo $matrix->checkAvailability();
+echo "<br>";
+//prendiamo in prestito
+echo "Prendo in prestito: <br>";
+echo $matrix->borrow();
+echo "controllo dispo:<br>";
+echo $matrix->checkAvailability();
+echo "<br>";
+echo "------------------------><br>";
+// restituitamo
+echo "Prendo in prestito: <br>";
+echo $matrix->return();
+echo "controllo dispo:<br>";
+echo $matrix->checkAvailability();
+echo "<br>";
+echo "------------------s------><br>";
+//controlliamo se rentable
+echo "<br>";
 ?>
